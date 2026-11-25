@@ -21,20 +21,23 @@ function App() {
 
   return (
     <div>
-      {page === "start" && (
-        <div className="start-page">
-          <h1>Pet Adoption</h1>
-          <p>Find a loving friend and give a pet a happy home.</p>
+  {page === "start" && (
+  <div className="start-page">
+    <div className="home-content">
+      <h1>Pet Adoption</h1>
 
-          <button onClick={() => setPage("login")}>
-            Login
-          </button>
+      <p>Find a loving friend and give a pet a happy home.</p>
 
-          <button onClick={() => setPage("register")}>
-            Register
-          </button>
-        </div>
-      )}
+      <button onClick={() => setPage("login")}>
+        Login
+      </button>
+
+      <button onClick={() => setPage("register")}>
+        Register
+      </button>
+    </div>
+  </div>
+)}
 
       {page === "login" && (
         <Login setPage={setPage} />
